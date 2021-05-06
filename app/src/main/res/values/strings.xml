@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Covians</string>
+    <string name="pin_code_text">Pin code</string>
+    <string name="splashLine">A team of teen to help you</string>
+    <string name="companyTag">from Begawo Inc.</string>
+    <string name="todo">TODO</string>
+    <string name="search">SEARCH</string>
+
+</resources>

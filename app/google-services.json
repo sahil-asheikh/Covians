@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1061430631689",
+    "project_id": "covians-fd521",
+    "storage_bucket": "covians-fd521.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061430631689:android:0f6e7c20b4368e331947d8",
+        "android_client_info": {
+          "package_name": "com.begawoinc.covians"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061430631689-kjpt9mmhgqantuidhglk130lrnn7tn72.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsuksBan7453mceDoqXvhwwVvQ8tBg0rU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061430631689-kjpt9mmhgqantuidhglk130lrnn7tn72.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

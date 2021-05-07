@@ -32,24 +32,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Hospital/Clinic Name"
-                android:inputType="textPersonName" />
+                android:hint="@string/hospital_clinic_name"
+                android:inputType="textPersonName"
+                android:autofillHints="@string/todo" />
 
             <EditText
                 android:id="@+id/contactNo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Contact Number"
-                android:inputType="phone" />
+                android:hint="@string/contact_number"
+                android:inputType="phone"
+                android:autofillHints="@string/todo" />
 
             <EditText
                 android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Address"
-                android:inputType="textPersonName" />
+                android:hint="@string/address"
+                android:inputType="textPersonName"
+                android:autofillHints="@string/todo" />
 
             <Spinner
                 android:id="@+id/cities"
@@ -62,18 +65,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Other Details like Price, Delivery, etc."
+                android:hint="@string/other_details_like_price_delivery_etc"
                 android:inputType="textPersonName"
-                android:autofillHints="" />
+                android:autofillHints="@string/todo" />
 
             <EditText
                 android:id="@+id/note"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Note like second number, etc."
+                android:hint="@string/note_like_second_number_etc"
                 android:inputType="textPersonName"
-                android:autofillHints="" />
+                android:autofillHints="@string/todo" />
 
         </LinearLayout>
     </ScrollView>

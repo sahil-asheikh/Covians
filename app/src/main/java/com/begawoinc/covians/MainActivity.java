@@ -17,7 +17,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     Button search_btn;
-    Spinner location;
+    Spinner cities;
     FloatingActionButton fab;
 
 
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
 //      find view by id
         search_btn = findViewById(R.id.search_btn);
-        location = findViewById(R.id.location);
+        cities = findViewById(R.id.cities);
         fab = findViewById(R.id.fab);
 
 
@@ -41,22 +41,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//      adding locations into sninner
-        List<String> list = new ArrayList<String>();
-        list.add("Select City");        // this is default to show the title in the drop down menu
-
-//      setting data into sninner using firebase
-        list.add("Delhi");
-        list.add("Mumbai");
-        list.add("Nagpur");
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, list);
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        location.setAdapter(dataAdapter);
+//      adding city into spinner from firebase
+        List<String> citieslist = new ArrayList<String>();
+        citieslist.add("Select city");        // this is default to show the title in the drop down menu
+//      setting data into spinner using firebase
+        citieslist.add("Delhi");
+        citieslist.add("Mumbai");
+        citieslist.add("Nagpur");
+        ArrayAdapter<String> citydataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, citieslist);
+        citydataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        cities.setAdapter(citydataAdapter);
 
 
 //      selecting data from drop down menu
-        String location_str = location.getSelectedItem().toString();
+        String city = cities.getSelectedItem().toString();
 
         
 

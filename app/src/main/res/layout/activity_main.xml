@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/location"
+        android:id="@+id/cities"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="15dp"

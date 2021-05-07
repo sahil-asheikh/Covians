@@ -5,5 +5,10 @@
     <string name="companyTag">from Begawo Inc.</string>
     <string name="todo">TODO</string>
     <string name="search">SEARCH</string>
+    <string name="hospital_clinic_name">Hospital/Clinic Name</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="address">Address</string>
+    <string name="other_details_like_price_delivery_etc">Other Details like Price, Delivery, etc.</string>
+    <string name="note_like_second_number_etc">Note like second number, etc.</string>
 
 </resources>

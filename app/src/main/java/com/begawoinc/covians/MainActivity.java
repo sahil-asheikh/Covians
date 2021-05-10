@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MyAdapter.OnLeadListener {
 
     Button search_btn;
     Spinner cities;
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         leads_recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         leads_arrayList = new ArrayList<>();
-        myAdapter = new MyAdapter(this, leads_arrayList);
+        myAdapter = new MyAdapter(this, leads_arrayList, this);
         leads_recyclerView.setAdapter(myAdapter);
         reference_recyclerView.addValueEventListener(new ValueEventListener() {
             @Override
@@ -179,5 +179,12 @@ public class MainActivity extends AppCompatActivity {
         cities.setAdapter(citydataAdapter);
 
 
+    }
+
+    @Override
+    public void onLeadClick(int position) {
+        Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, Lead_Info.class);
+        startActivity(intent);
     }
 }

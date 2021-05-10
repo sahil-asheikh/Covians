@@ -122,9 +122,6 @@ public class AddDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-//              make progressBar visible
-                progressBar.setVisibility(View.VISIBLE);
-
 //              fetch data from text fields
                 String resource = sources.getSelectedItem().toString();
                 String hospitalName = hospitalClinicName.getText().toString();
@@ -146,11 +143,13 @@ public class AddDetails extends AppCompatActivity {
                 } else if (city.equals("Select city")) {
                     Toast.makeText(AddDetails.this, "Please Select City", Toast.LENGTH_SHORT).show();
                 } else if (TextUtils.isEmpty(additionalDetails)) {
-                    Toast.makeText(AddDetails.this, "Please Enter Price", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddDetails.this, "Empty Field", Toast.LENGTH_SHORT).show();
                 } else if (TextUtils.isEmpty(extraNote)) {
-                    Toast.makeText(AddDetails.this, "Please Enter Verified date", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddDetails.this, "Empty Field", Toast.LENGTH_SHORT).show();
                 } else {
 
+//                  make progressBar visible
+                    progressBar.setVisibility(View.VISIBLE);
 //                  setting values to Leads class
                     leads.setResource(resource);
                     leads.setHospitalName(hospitalName);

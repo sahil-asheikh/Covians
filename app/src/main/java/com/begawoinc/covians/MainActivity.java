@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -151,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnLeadL
                                             lead.setAdditionalDetails(dataSnapshot.child("additionalDetails").getValue().toString());
                                             lead.setExtraNote(dataSnapshot.child("extraNote").getValue().toString());
 
-//                                      condition to compare spinner city and lead's city
+//                                          condition to compare spinner city and lead's city
                                             if (city.equals(dataSnapshot.child("city").getValue().toString())) {
                                                 leads_arrayList.add(lead);
                                                 progressBar.setVisibility(View.INVISIBLE);              // to stop progressBar
@@ -183,8 +184,6 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnLeadL
 
     @Override
     public void onLeadClick(int position) {
-        Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(MainActivity.this, Lead_Info.class);
-        startActivity(intent);
+//        onCLick for items
     }
 }

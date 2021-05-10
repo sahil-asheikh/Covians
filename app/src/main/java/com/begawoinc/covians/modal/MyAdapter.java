@@ -2,17 +2,15 @@ package com.begawoinc.covians.modal;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.begawoinc.covians.Lead_Info;
-import com.begawoinc.covians.MainActivity;
 import com.begawoinc.covians.R;
 
 import java.util.ArrayList;
@@ -67,7 +65,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             number = itemView.findViewById(R.id.number);
             this.onLeadListener = onLeadListener;
 
-            itemView.setOnClickListener(this);
+//          setting onClickListener on call button
+            number.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+//                  intent to open dilar
+                    Intent intent = new Intent(Intent.ACTION_DIAL);
+                    String num_tel = "tel:" + number.getText().toString();
+                    intent.setData(Uri.parse(num_tel));
+                    v.getContext().startActivity(intent);
+
+                }
+            });
+
 
         }
 

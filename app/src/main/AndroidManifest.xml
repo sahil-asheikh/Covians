@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Covians">
-        <activity android:name=".Lead_Info"></activity>
         <activity android:name=".AddDetails" />
         <activity android:name=".SplashScreen">
             <intent-filter>
